@@ -49,7 +49,6 @@ _EXTENSION_MAP: dict[str, str] = {
 }
 
 
-
 _ANNOTATOR_MAP = {
     "python": annotate_python,
     "text": annotate_text,
@@ -88,6 +87,7 @@ _ANNOTATOR_MAP: dict[str, object] = {
     "dockerfile": annotate_dockerfile,
 }
 
+
 def annotate(
     text: str,
     source_name: str = "<source>",
@@ -103,6 +103,7 @@ def annotate(
     """
     if file_type is None:
         import os as _os
+
         _basename = _os.path.basename(source_name)
         if (
             _basename == "Dockerfile"
