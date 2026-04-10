@@ -37,6 +37,12 @@ class ProjectIndexer:
             "**/*.jsx",
             "**/*.go",
             "**/*.rs",
+            "**/*.c",
+            "**/*.h",
+            "**/*.glsl",
+            "**/*.vert",
+            "**/*.frag",
+            "**/*.comp",
             "**/*.cs",
             "**/*.md",
             "**/*.txt",
@@ -79,6 +85,8 @@ class ProjectIndexer:
             # Coverage / test artifacts
             "**/coverage/**",
             "**/.nyc_output/**",
+            # C/C++ build artifacts
+            "**/_deps/**",
             # Claude Code worktrees (duplicates of the project)
             "**/.claude/worktrees/**",
         ]
